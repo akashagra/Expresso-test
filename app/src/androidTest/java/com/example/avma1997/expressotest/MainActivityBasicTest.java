@@ -27,6 +27,16 @@ public class MainActivityBasicTest  {
 
 
     }
+    @Test
+    public void clickDecrementButton_IncrementValues(){
+        onView((withId(R.id.button2))).perform(click());
+        onView((withId(R.id.textView))).check(matches(withText("0")));
+        onView(withId(R.id.textView2)).check(matches(withText("0")));
+
+
+
+    }
+
 
 
 }
